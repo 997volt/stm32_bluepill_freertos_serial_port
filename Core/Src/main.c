@@ -74,7 +74,10 @@ void StartHT(void *argument);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+void send_string(char* s)
+{
+	HAL_UART_Transmit(&huart1, (uint8_t*)s, strlen(s), 1000);
+}
 /* USER CODE END 0 */
 
 /**
@@ -280,7 +283,8 @@ void StartLT(void *argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+	  send_string("LT transmiting");
+	  osDelay(1000);
   }
   /* USER CODE END 5 */
 }
@@ -298,7 +302,8 @@ void StartHT(void *argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+	  send_string("HT transmiting");
+	  osDelay(2000);
   }
   /* USER CODE END StartHT */
 }
