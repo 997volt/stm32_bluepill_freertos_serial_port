@@ -283,7 +283,7 @@ void StartLT(void *argument)
   /* Infinite loop */
   for(;;)
   {
-	  send_string("LT transmiting");
+	  send_string("LT transmiting\n");
 	  osDelay(1000);
   }
   /* USER CODE END 5 */
@@ -302,7 +302,7 @@ void StartHT(void *argument)
   /* Infinite loop */
   for(;;)
   {
-	  send_string("HT transmiting");
+	  send_string("HT transmiting\n");
 	  osDelay(2000);
   }
   /* USER CODE END StartHT */
