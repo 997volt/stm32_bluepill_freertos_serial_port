@@ -1,4 +1,4 @@
-# stm32_bluepill_template
+# stm32_bluepill_freertos_serial_port
 
 Sending serial data from 2 tasks in FreeRTOS using Waveshare PL2303 transiever.
 
@@ -6,7 +6,7 @@ Required drivers for transiever - https://www.waveshare.com/wiki/File:PL2303_Win
 
 Termite (used serial port terminal for PC) - https://www.compuphase.com/software_termite.htm
 
-Created in STM32CubeIDE for STM32Duino "Blue Pill" HW-267 based on STM32F103CBT6 MCU. 
+Created in STM32CubeIDE for STM32 "Blue Pill" HW-267 based on STM32F103CBT6 MCU. 
 
 ### To run/modify this project locally:
 
