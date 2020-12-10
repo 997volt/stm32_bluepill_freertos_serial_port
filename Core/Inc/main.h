@@ -32,7 +32,8 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include<string.h>
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -55,6 +56,8 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
 void send_string(char* s);
+void send_char(char c);
+int __io_putchar(int ch);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/

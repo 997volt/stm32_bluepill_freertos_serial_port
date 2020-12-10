@@ -78,6 +78,17 @@ void send_string(char* s)
 {
 	HAL_UART_Transmit(&huart1, (uint8_t*)s, strlen(s), 1000);
 }
+
+void send_char(char c)
+{
+	HAL_UART_Transmit(&huart1, (uint8_t*)&c, 1, 1000);
+}
+
+int __io_putchar(int ch)
+{
+	send_char(ch);
+	return ch;
+}
 /* USER CODE END 0 */
 
 /**
@@ -283,7 +294,7 @@ void StartLT(void *argument)
   /* Infinite loop */
   for(;;)
   {
-	  send_string("LT transmiting\n");
+	  printf("LT transmiting\n");
 	  osDelay(1000);
   }
   /* USER CODE END 5 */
@@ -302,7 +313,7 @@ void StartHT(void *argument)
   /* Infinite loop */
   for(;;)
   {
-	  send_string("HT transmiting\n");
+	  printf("HT transmiting\n");
 	  osDelay(2000);
   }
   /* USER CODE END StartHT */
